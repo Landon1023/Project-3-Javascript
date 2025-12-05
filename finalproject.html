@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project - All About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Final Project  -  All About Me</h1>
+    
+   
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab('hobbies', this)">Hobbies</button>
+        <button class="tab-button" onclick="showTab('movies', this)">Favorite Movies</button>
+        <button class="tab-button" onclick="showTab('songs', this)">Favorite Songs</button>
+    </div>
+    
+
+    <div id="hobbies" class="tab-content active">
+        <h2 style="background-color:rgb(204, 50, 50)"><em>History Section</em></h2>
+        <button onclick="showHistory(this)">Show My History</button>
+        <h3 id="historyText" style="display:none;">I grew up right here in Fishers, indiana. It was just me, my mom, my dad, and my older brother in a matchbox sized house right by downtown Fishers.</h3>
+        
+        <h2><em>Hobbies Section</em></h2>
+        <button id="toggleBtn" onclick="toggleHobbyDetails(this)">Hide Hobbies</button>
+        <table border="8">
+            <thead>
+            <tr>
+                <th>Hobby name</th>
+                <th>Hobby Description</th>
+                <th>Hobby #</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rugby</td>
+                    <td>This has been my favorite sport over the years</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Piano</td>
+                    <td>My favorite instrument to learn and play, just so beautiful</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Basketball</td>
+                    <td>I only really play at parks or with friends but still a great time</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Guitar</td>
+                    <td>Dont play this as much but i still practice from time to time</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
+    
+
+    <div id="movies" class="tab-content">
+        <h2 style="background-color:rgb(226, 43, 43)"><em>Favorite movies</em></h2>
+        <p id="movieCount" style="color: var(--muted);"></p>
+        <ol>
+            <li>Tron Legacy</li>
+            <li>Wall-E</li>
+            <li>Transformers:Dark Side of the Moon</li>
+        </ol>
+    </div>
+    
+
+    <div id="songs" class="tab-content">
+        <h2><em>Favorite Songs</em></h2>
+        <button onclick="countItems()">Count All Items</button>
+        <ol>
+            <li>Numb-Giveon</li>
+            <li>Highlights-Drake</li>
+            <li>Still loving you-Scorpions</li>
+        </ol>
+    </div>
+
+    <script src="javascripts.js"></script>
+            
